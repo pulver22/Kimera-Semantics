@@ -100,7 +100,7 @@
 
     <!-- Params -->
     <param name="tsdf_voxel_size"           value="$(arg voxel_size)" />
-    <param name="tsdf_voxels_per_side"      value="32" />
+    <param name="tsdf_voxels_per_side"      value="16" />
     <param name="max_ray_length_m"          value="$(arg max_ray_length_m)" />
     <param name="min_time_between_msgs_sec" value="0.2" />
     <param name="voxel_carving_enabled"     value="true" />
