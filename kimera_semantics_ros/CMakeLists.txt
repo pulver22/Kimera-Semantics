@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 2.8.3)
 project(kimera_semantics_ros)
 add_definitions(-std=c++14)
 
+add_definitions(-std=c++14)
+
 find_package(catkin_simple REQUIRED)
 
 catkin_simple()

@@ -11,7 +11,7 @@
   <arg name="play_bag" default="false"/>
   <!-- Let's go at twice real-time to show the speed! It can go faster, but then rviz struggles. -->
   <arg name="rosbag_rate" default="2.0"/>
-  <arg name="bag_file" default="$(find kimera_semantics_ros)/rosbags/kimera_semantics_demo.bag"/>
+  <arg name="bag_file" default="$(find kimera_semantics_ros)/rosbags/2024-02-15-17-24-37.bag"/>
 
   <!-- We just want to run metric reconstruction -->
   <arg name="metric_semantic_reconstruction" default="false"/>

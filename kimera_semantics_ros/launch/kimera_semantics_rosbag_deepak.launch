@@ -9,7 +9,7 @@
    - 1. VIO's estimated base_link: `left_cam_base_link`
    - 2. Or, if you want to use simulator's ground-truth: `left_cam`
   -->
-  <arg name="sensor_frame" default="left_cam"/>
+  <arg name="sensor_frame" default="xtion_rgb_optical_frame"/>
 
   <!-- If you want to play directly from a rosbag -->
   <arg name="play_bag" default="true"/>
@@ -100,7 +100,7 @@
 
     <!-- Params -->
     <param name="tsdf_voxel_size"           value="$(arg voxel_size)" />
-    <param name="tsdf_voxels_per_side"      value="32" />
+    <param name="tsdf_voxels_per_side"      value="16" />
     <param name="max_ray_length_m"          value="$(arg max_ray_length_m)" />
     <param name="min_time_between_msgs_sec" value="0.2" />
     <param name="voxel_carving_enabled"     value="true" />
@@ -137,4 +137,8 @@
   </node>
   
   <node pkg="tf" type="static_transform_publisher" name="link1_broadcaster" args="0 0 0 0 0 0 1 world map 100" />
+  
+  <node type="rviz" name="rviz" pkg="rviz" args="-d $(find kimera_semantics_ros)/rviz/kimera_semantics_sim_deepak.rviz" />
+  
+  <node name="throttle" pkg="topic_tools" type="throttle" args="messages /semantic_pointcloud 0.5 " />
 </launch>
