@@ -54,7 +54,7 @@ A related work to ours is [Voxblox++](https://github.com/ethz-asl/voxblox-pluspl
 
 - Install system dependencies:
 ```bash
-sudo apt-get install python-wstool python-catkin-tools  protobuf-compiler autoconf
+sudo apt-get install python3-wstool python3-catkin-tools  protobuf-compiler autoconf
 # Change `melodic` below for your own ROS distro
 sudo apt-get install ros-melodic-cmake-modules
 ```
